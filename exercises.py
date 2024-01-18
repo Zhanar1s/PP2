@@ -85,6 +85,45 @@ x = 5.5
 x = int(x)
 
  #5.3
+x = 5
+x = complex(x)
+
+ #6.1
+x = "Hello World"
+print(len(x))
+
+ #6.2
+txt = "Hello World"
+x = txt[0]
+
+ #6.3
+txt = "Hello World"
+x = txt[2:5]
+
+ #6.4
+txt = " Hello World "
+x = txt.strip()
+
+ #6.5
+txt = "Hello World"
+txt = txt.upper()
+
+
+ #6.6
+txt = "Hello World"
+txt = txt.lower()
+
+ #6.7
+txt = "Hello World"
+txt = txt.replace("H", "J")
+
+ #6.8
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+
+
+
 
 
 

@@ -9,14 +9,14 @@ carname = "Volvo"
 #3. Display the sum of '5 + 10', using two variables: 'x' and 'y'.
 x = 5
 y = 10
-print(x + y)
+print(x + y)  #output: 15
 
 
 #4. Create a variable called 'z', assign 'x + y' to it, and display the result.
 x = 5
 y = 10
 z = x + y
-print(z)
+print(z)  #output: 15
 
 
 #5. Insert the correct syntax to assign values to multiple variables in one line:

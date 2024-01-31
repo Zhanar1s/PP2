@@ -16,6 +16,7 @@ if "apple" in fruits:
 if 5 != 10:
     print("5 and 10 is not equal")  #output: 5 and 10 is not equal 
 
+
 #5. Use the correct logical operator to check if at least one of two statements is True.
 if 5 == 10 or 4 == 4:
   print("At least one of the statements is true")   #output: At least one of the statements is true

@@ -5,21 +5,21 @@ from tabulate import tabulate
 f = open('row.txt', 'r', encoding='utf8')
 text = f.read()
 
-pattern = r"\n(?P<реті>[0-9]+)\.\n(?P<аты>.+)\n(?P<саны>.+)x(?P<бағасы>.+)\n(?P<құны>.+)"
+pattern = r"\n(?P<sequence>[0-9]+)\.\n(?P<name>.+)\n(?P<quantity>.+)x(?P<price>.+)\n(?P<cost>.+)"
 
 res = re.finditer(pattern, text)
 
 data = []
 for x in res:
     data.append([
-        x.group('реті'), 
-        x.group('аты'),
-        float(x.group('саны').strip().replace(',','.')),
-        float(x.group('бағасы').strip().replace(',','.').replace(' ','')),
-        float(x.group('құны').strip().replace(',','.').replace(' ',''))
+        x.group('sequence'), 
+        x.group('name'),
+        float(x.group('quantity').strip().replace(',','.')),
+        float(x.group('price').strip().replace(',','.').replace(' ','')),
+        float(x.group('cost').strip().replace(',','.').replace(' ',''))
     ])
 
-headers = ['реті', 'аты', 'саны', 'бағасы', 'құны']
+headers = ['sequence', 'name', 'quantity', 'price', 'cost']
 table = tabulate(data, headers=headers, tablefmt='pretty')
 
 with open('formatted_row.txt', 'w', encoding='utf8') as txtfile:
